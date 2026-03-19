@@ -1,0 +1,50 @@
+{
+  "name": "loveletter2code",
+  "version": "1.0.0",
+  "description": "A love letter application built with Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "dist": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.loveletter.app",
+    "productName": "Love Letter",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "icon4.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "installerIcon": "icon4.ico",
+      "uninstallerIcon": "icon4.ico",
+      "uninstallDisplayName": "Love Letter",
+      "license": "license.txt",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "menuCategory": "Love Letter",
+      "allowToChangeInstallationDirectory": false,
+      "runAfterFinish": true
+    }
+  },
+  "keywords": ["love", "letter", "electron", "desktop"],
+  "author": {
+    "name": "Suay Akbudak",
+    "email": "suayakbudak@gmail.com",
+    "url": "https://github.com/rayanowl"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^35.0.1",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}
